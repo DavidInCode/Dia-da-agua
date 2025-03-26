@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --font-titulo: "Lora", serif;
+    --font-texto: "Open Sans", sans-serif;
+    --verde-musgo: #556B2F;
+    --verde-escuro: #2f4538;
+    --branco: #fff;
+    --bege: #f5f5dc;
+    --preto: #000;
+    --azul-cristalina: #ADD8E6;
+    --azul: #11114e;
+    --gradient: linear-gradient(rgb(17, 17, 17, 0.5), rgba(20, 20, 20, 0.3));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+section.slider-inicio {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider-content {
+    width: 400%;
+    height: 100vh;
+}
+
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+
+.img {
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+}
+
+.img2 {
+    background-image: var(--gradient), url('./img/agua-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .conteudo-principal-inicio-texto .btn {
+        background-color: #556b2f9f;
+    }
+}
+
+.conteudo-principal-inicio-texto {
+    color: var(--bege);
+    width: 60%;
+    text-align: justify;
+
+    & h1 {
+        font-family: var(--font-titulo);
+        font-size: 4em;
+        text-transform: uppercase;
+    }
+
+    & p {
+        font-family: var(--font-texto);
+        font-size: 20px;
+    }
+
+    & .btn {
+        text-decoration: none;
+        width: 200px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 30px;
+        font-size: 22px;
+        color: var(--branco);
+        font-family: var(--font-texto);
+        font-weight: 400;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: .3s linear;
+    }
+
+    & .btn:hover {
+        background-color: var(--verde-musgo);
+        border: none;
+        color: var(--bege);
+    }
+}
+
+.cards {
+    background-color: var(--bege);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 5rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 10px;
+    background-color: var(--azul-cristalina);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--branco);
+    width: 400px;
+    padding: 30px;
+    height: 250px;
+    transition: 0.35s ease;
+
+    & h3 {
+        color: var(--azul);
+        font-family: var(--font-texto);
+        font-size: 1.3rem;
+        height: 50%;
+    }
+
+    & img {
+        height: 50%
+    }
+}
+
+.card:hover {
+    transform: scale(0.9) translateY(5px);
+    cursor: pointer;
+}
+
+.container-sobre {
+    height: 100vh;
+    width: 100%;
+    background-image: url('./img/agua-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+
+.sobre {
+    width: 40%;
+    height: 700px;
+    padding: 2% 5%;
+    top: 10%;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    background-color: var(--bege);
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 2em;
+
+    & h2 {
+        font-family: var(--font-titulo);
+        font-size: 3em;
+        font-weight: 400;
+    }
+
+    & p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 22px;
+        text-align: justify;
+    }
+
+    & .btn {
+        text-decoration: none;
+        background-color: var(--preto);
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 30px;
+        font-size: 18px;
+        color: var(--branco);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+    }
+
+    & .btn:hover {
+        background-color: var(--bege);
+        border: 2px solid var(--preto);
+        color: var(--preto);
+    }
+}
+
+.card1 {
+    height: 15vh;
+    background-color: var(--azul-cristalina);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & h2 {
+        font-family: var(--font-titulo);
+        font-size: 3em;
+        text-transform: capitalize;
+        font-weight: lighter;
+    }
+}
+
+.container-conservacao {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    /* acho que não precisa dessa config */
+    background-color: var(--bege);
+
+    & video {
+        width: 40%;
+        margin: 5% auto;
+        border-radius: 10px;
+    }
+
+    & .texto {
+        width: 40%;
+        height: 400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    & h2 {
+        font-family: var(--font-titulo);
+        font-size: 2.4em;
+        text-align: left;
+        text-transform: capitalize;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    & p {
+        font-family: var(--font-texto);
+        font-size: 20px;
+        text-align: justify;
+        line-height: 2;
+    }
+
+    & .btn {
+        text-decoration: none;
+        background-color: var(--azul-cristalina);
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 30px;
+        font-size: 18px;
+        color: var(--preto);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+    }
+
+    & .btn:hover {
+        background-color: var(--bege);
+        border: 2px solid var(--preto);
+        color: var(--preto);
+    }
+}
+
+.texto {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.secao-galeria {
+    height: 115vh;
+    width: 100%;
+    background-color: #4d98a5;
+
+    & .texto h2 {
+        margin-top: 40px;
+        font-family: var(--font-titulo);
+        text-transform: capitalize;
+        font-size: 3em;
+        font-weight: 400;
+        color: white;
+    }
+}
+
+.conatinerGaleria {
+    display: flex;
+    height: 100vh;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+.conteudo-galeria {
+    width: 500px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 2px solid var(--branco);
+    box-shadow: 0 5px 15px #252525;
+}
+
+.conteudo-galeria .img-galeria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.conteudo-galeria .img-galeria:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #303030;
+    color: var(--bege);
+    font-size: 20px;
+}
